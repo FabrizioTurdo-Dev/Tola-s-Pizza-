@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Tola's Pizzas Caseras | Pedidos Online en Garín</title>
+    <meta name="description" content="Pizzas caseras congeladas de alta calidad en Garín. Prácticas, ricas y artesanales. ¡Hacé tu pedido online aquí!">
+    <meta name="keywords" content="pizzas congeladas, pizzas caseras, Garín, pedido de pizzas, Tolas Pizzas">
+    <link rel="canonical" href="https://tu-usuario.github.io/tu-repositorio/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tu-usuario.github.io/tu-repositorio/">
+    <meta property="og:title" content="Tola's Pizzas Caseras | Pedí Online">
+    <meta property="og:description" content="Hacé tu pedido de pizzas congeladas. ¡Listas para hornear y disfrutar!">
+    <meta property="og:image" content="https://tu-usuario.github.io/tu-repositorio/img/preview.jpg"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FoodEstablishment",
+      "name": "Tola's Pizzas",
+      "description": "Pizzas caseras congeladas de alta calidad en Garín.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Garín",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "telephone": "+541161915635",
+      "servesCuisine": "Pizza"
+    }
+    </script>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="logo-title">LLEGÓ <span class="accent-bg">TOLA'S</span></h1>
+            <h2>PIZZAS CASERAS CONGELADAS</h2>
+
+            <div class="phone-cta">
+                <i class="fas fa-phone"></i> 1161915635
+            </div>
+
+            <p class="subtitle">Una opción práctica, rica y de calidad, para tener siempre en casa.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="pedido" class="pedido-section">
+            <h2>🍕 NUESTRAS PIZZAS</h2>
+
+            <div class="pizza-selector-container">
+                <div class="pizza-option-card" data-pizza="Muzzarella">
+                    <div class="pizza-name">Muzzarella</div>
+                    <div class="pizza-price">$7.000</div>
+                    <div class="quantity-control">
+                        <button class="qty-minus" aria-label="Disminuir">-</button>
+                        <input type="number" value="0" min="0" max="99" class="qty-input" readonly>
+                        <button class="qty-plus" aria-label="Aumentar">+</button>
+                    </div>
+                </div>
+
+                <div class="pizza-option-card" data-pizza="Napolitana">
+                    <div class="pizza-name">Napolitana</div>
+                    <div class="pizza-price">$8.500</div>
+                    <div class="quantity-control">
+                        <button class="qty-minus" aria-label="Disminuir">-</button>
+                        <input type="number" value="0" min="0" max="99" class="qty-input" readonly>
+                        <button class="qty-plus" aria-label="Aumentar">+</button>
+                    </div>
+                </div>
+
+                <div class="pizza-option-card" data-pizza="Jamón y Morrón">
+                    <div class="pizza-name">Jamón y Morrón</div>
+                    <div class="pizza-price">$8.500</div>
+                    <div class="quantity-control">
+                        <button class="qty-minus" aria-label="Disminuir">-</button>
+                        <input type="number" value="0" min="0" max="99" class="qty-input" readonly>
+                        <button class="qty-plus" aria-label="Aumentar">+</button>
+                    </div>
+                </div>
+
+                <div class="pizza-option-card" data-pizza="Fugazzeta">
+                    <div class="pizza-name">Fugazzeta</div>
+                    <div class="pizza-price">$7.500</div>
+                    <div class="quantity-control">
+                        <button class="qty-minus" aria-label="Disminuir">-</button>
+                        <input type="number" value="0" min="0" max="99" class="qty-input" readonly>
+                        <button class="qty-plus" aria-label="Aumentar">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="delivery-method">
+                <h3>¿Cómo querés recibir tu pedido?</h3>
+                <div class="method-options">
+                    <label class="method-card">
+                        <input type="radio" name="entrega" value="Retiro" checked>
+                        <div class="method-info">
+                            <i class="fas fa-store"></i>
+                            <span>Retiro (Garín)</span>
+                        </div>
+                    </label>
+                    <label class="method-card">
+                        <input type="radio" name="entrega" value="Envío a domicilio">
+                        <div class="method-info">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Envío a domicilio</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="total-display">
+                <span>Total estimado:</span>
+                <span id="totalPrice">$0</span>
+            </div>
+
+            <div class="notes-container">
+                <p class="note-delivery" id="delivery-note" style="display:none;">
+                    <i class="fas fa-info-circle"></i> El costo del envío se acordará al confirmar tu dirección.
+                </p>
+                <p class="note-delivery">
+                    <i class="fas fa-truck"></i> Envíos disponibles de Jueves a Sábados (consultar por zona).
+                </p>
+            </div>
+
+            <button id="makeOrderBtn" class="cta-button primary-cta" disabled>
+                <i class="fab fa-whatsapp"></i> Hacé tu Pedido por WhatsApp
+            </button>
+        </section>
+
+        <section id="retiro" class="info-section">
+            <div class="info-details">
+                <p>
+                    <i class="fas fa-clock"></i> Recordá que también podés retirar tu pedido con 24 horas de anticipación por Garín.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tola's Pizzas Caseras. Todos los derechos reservados.</p>
+    </footer>
+
+    <a href="#" id="whatsappFloat" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

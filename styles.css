@@ -1,0 +1,369 @@
+/* Importar la fuente Montserrat (usado para todo el texto) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+/* === 1. VARIABLES DE COLOR === */
+:root {
+    --color-primary: #FF7F00; /* Naranja Brillante (como en el logo) */
+    --color-secondary: #000080; /* Azul Oscuro (casi marino) */
+    --color-text-dark: #333333;
+    --color-text-light: #ffffff;
+    --color-background: #f8f8f8;
+}
+
+/* === 2. RESET Y ESTILOS BASE === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-background);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+section {
+    padding: 40px 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+/* === 3. HERO SECTION === */
+.hero {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 5%;
+    border-radius: 0 0 50% 50% / 0 0 10% 10%; /* Borde curvo para un toque moderno */
+}
+
+.logo-title {
+    font-size: 3.5em;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.accent-bg {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 5px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 1;
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+    background-color: var(--color-text-light);
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.phone-cta {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+}
+.phone-cta i {
+    margin-right: 10px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* === 4. BOTONES CTA === */
+.cta-button {
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.primary-cta {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.primary-cta:hover:not(:disabled) {
+    background-color: #000060;
+    transform: translateY(-2px);
+}
+
+.primary-cta:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.cta-button i {
+    margin-right: 10px;
+}
+
+/* === 5. SECCIÓN DE PEDIDO Y SELECTORES === */
+.pedido-section h2 {
+    color: var(--color-secondary);
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.pizza-selector-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.pizza-option-card {
+    background-color: var(--color-text-light);
+    border: 2px solid var(--color-primary);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pizza-name {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 5px;
+}
+
+.pizza-price {
+    font-size: 1.1em;
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.quantity-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qty-input {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 1.1em;
+    margin: 0 5px;
+    border-radius: 5px;
+    pointer-events: none; /* Deshabilitar entrada manual */
+}
+
+.qty-minus, .qty-plus {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+    font-weight: 900;
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 1;
+    padding-bottom: 4px;
+}
+
+.qty-minus:hover, .qty-plus:hover {
+    background-color: var(--color-primary);
+}
+
+.note-delivery {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+/* === 6. SECCIÓN DE RETIRO === */
+.info-section {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 20px 5%;
+}
+
+.info-details p {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.info-details i {
+    margin-right: 10px;
+}
+
+/* === 7. FOOTER === */
+footer {
+    background-color: var(--color-text-dark);
+    color: #aaaaaa;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+/* === 8. BOTÓN FLOTANTE WHATSAPP === */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* === 9. MEDIA QUERIES (RESPONSIVE) === */
+@media (max-width: 767px) {
+    /* Hero */
+    .hero {
+        min-height: 45vh;
+    }
+    .logo-title {
+        font-size: 2.5em;
+    }
+    .hero h2 {
+        font-size: 1.2em;
+    }
+    .phone-cta {
+        font-size: 1.4em;
+    }
+
+    /* Pedido */
+    .pizza-selector-container {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+    }
+
+    .cta-button {
+        width: 90%;
+        font-size: 1.1em;
+    }
+}
+
+/* === ANIMACIONES === */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content, .pizza-option-card, .delivery-method {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.pizza-option-card:nth-child(2) { animation-delay: 0.2s; }
+.pizza-option-card:nth-child(3) { animation-delay: 0.4s; }
+.pizza-option-card:nth-child(4) { animation-delay: 0.6s; }
+
+/* === SELECTOR DE ENTREGA === */
+.delivery-method {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.delivery-method h3 {
+    margin-bottom: 15px;
+    color: var(--color-secondary);
+}
+
+.method-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.method-card {
+    cursor: pointer;
+    flex: 1;
+    max-width: 200px;
+}
+
+.method-card input {
+    display: none; /* Escondemos el radio button original */
+}
+
+.method-info {
+    border: 2px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.method-card input:checked + .method-info {
+    border-color: var(--color-primary);
+    background-color: #fff4e6;
+    color: var(--color-primary);
+}
+
+/* === TOTAL DISPLAY === */
+.total-display {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-top: 20px;
+    color: var(--color-secondary);
+}
+
+#totalPrice {
+    color: var(--color-primary);
+    margin-left: 10px;
+}
